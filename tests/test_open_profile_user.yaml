@@ -1,0 +1,13 @@
+name: 'Переход на страницу профиля пользователя'
+cmd: 'pytest --alluredir={allure_reports_path} tests/test_open_profile_user.py {parameters}'
+steps:
+  - 'Открытие стартовой страницы'
+  - 'Внесение авторизационных данных, нажатие кнопки "Войти"'
+  - 'Открытие главной страницы'
+  - 'Переход на страницу профиля пользователя'
+parameters:
+  - key: ui_url
+    name: URL адрес
+    required: true
+    default: dpirportal.mos.ru
+    unit: string
